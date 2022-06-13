@@ -1,0 +1,224 @@
+body {
+    background: #f4d9e5;
+    font-family: "Lato", sans-serif;
+  }
+  
+  h3 {
+    color: #000;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  
+  .warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    background: #71a9ed;
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+  }
+  
+  .panels {
+    background: #fff;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height: 600px;
+    max-height: 600px;
+    width: 100%;
+    max-width: 1400px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .panel {
+    display: none;
+    animation: fadein 0.8s;
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .panel-title {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .radio {
+    display: none;
+  }
+  
+   #one:checked ~ .panels #one-panel,
+  #two:checked ~ .panels #two-panel,
+  #three:checked ~ .panels #three-panel {
+    display: block;
+  } 
+  
+  /* #one:checked ~ .tabs #one-tab,
+  #two:checked ~ .tabs #two-tab,
+  #three:checked ~ .tabs #three-tab {
+    /* background: #fff; */
+    /* color: #000; */
+    /* border-top: 3px solid #32557f; */
+  } */
+
+    /* .vis-item.vis-background.negative {
+        background-color: rgba(255, 0, 0, 0.2);
+    } */
+
+    /* .vis-item.vis-background.positive {
+        background-color: rgba(98, 255, 0, 0.2);
+    } */
+
+    /* .vis-item.vis-point {
+        
+
+    } */
+    .vis-timeline {
+        border: none !important;
+        margin-right: 50;
+    }
+
+    .vis-item.vis-point.vis-selected {
+        background-color: transparent !important;
+
+
+    }
+
+    h6 {
+        opacity: 0.3;
+        text-overflow: clip;
+    }
+
+
+    h2 {
+        color: red;
+        height: fit-content;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+    }
+
+    h1 {
+        color: blue;
+        height: fit-content;
+
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+
+    }
+
+    some {
+        color: black;
+        opacity: 0;
+    }
+
+    #left {
+        color: black;
+    }
+
+
+    #right {
+        color: red;
+    }
+
+    .vis-item.vis-dot {
+        position: absolute;
+
+        padding: 0;
+        border-width: 0px !important;
+        border-style: solid;
+        border-radius: 0px !important;
+        opacity: 0;
+    }
+
+    .vis-item {
+        font-family: sans-serif;
+        /* font-size: 6; */
+    }
+
+    .vis-item._1 {
+        font-family: sans-serif;
+        font-size: 3 !important;
+        height: min-content;
+        width: min-content;
+    }
+
+    .vis-item._2 {
+        font-family: sans-serif;
+        font-size: 7 !important;
+        height: min-content;
+        width: min-content;
+    }
+
+    .vis-item._3 {
+        font-family: sans-serif;
+        font-size: 13 !important;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .vis-item._4 {
+        font-family: sans-serif;
+        font-size: 20 !important;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .vis-item._5 {
+        font-family: sans-serif;
+        font-size: 30;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    #_1 {
+        color: blue;
+        font-size: 50 !important;
+    }
+
+    .vis-item.vis-selected {
+        background-color: white;
+        border-color: black;
+        color: black;
+        box-shadow: 0 0 10px gray;
+    }
+
+
+    /* .vis-item.vis-background {
+  border: none;
+  background-color: rgba(210, 219, 246, 0.4) !important;
+  color: black !important;
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
+}
+.vis-item.vis-background .vis-item-content {
+  position: absolute !important;
+  display: inline-block !important;
+  color: black !important;
+  font-size: larger !important;
+} */
+    /* 
+    .vis-background {
+  background-color: rgb(60, 0, 255);
+} */
