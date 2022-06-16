@@ -71,8 +71,10 @@
                 const options = {
                     orientation: { axis: 'both', item: 'top' },
  
-                    min: "2012-10-01",
+                    min: "2012-01-01",
                     max: "2022-10-11",
+                    zoomMin: 1000 * 60 * 60 * 24 * 15 ,   // about seven year in milliseconds
+
         
                     margin: {
                         item: 4,
@@ -149,10 +151,38 @@
                 const container1 = document.getElementById("visualization1")
         
                 const items1 = new vis.DataSet(eventArray.concat(itemArrayMonth));
+
+                const options1 = {
+                    orientation: { axis: 'both', item: 'top' },
+ 
+                    min: "2012-01-01",
+                    max: "2022-10-11",
+                    zoomMin: 1000 * 60 * 60 * 24 * 31 * 10,
+
+        
+                    margin: {
+                        item: 4,
+                        axis: 10
+        
+                    },
+                    stack: true,
+                    verticalScroll: true,
+                    zoomKey: "ctrlKey",
+                    selectable: true,
+                    template: function (item) {
+                        if (item.content == "LA" || item.content == "V" || item.content == "DF" || item.content == "NB")
+                            return '<h1 id="' + item.className + '">' + item.content + '</h1>';
+                        else if (item.content == "S" || item.content == "EL" || item.content == "ALT" || item.content == "KF" || item.content == "RV" || item.content == "SF")
+                            return '<h2 id="right" class="' + item.className + '">' + item.content + '</h2>';
+                        else {
+                            return '<h6 id="some" class="some">' + item.content + '</h6>';
+                        }
+                    }
+                };
         
         
        
-                const timeline1 = new vis.Timeline(container1, items1, options);
+                const timeline1 = new vis.Timeline(container1, items1, options1);
                 timeline1.on('select', function (props) {
         
                     // create empty array to hold ids of items with the same class name
@@ -206,10 +236,38 @@
                 const container2 = document.getElementById("visualization2")
         
                 const items2 = new vis.DataSet(eventArray.concat(itemArrayYear));
+
+                const options2 = {
+                    orientation: { axis: 'both', item: 'top' },
+ 
+                    min: "2012-01-01",
+                    max: "2022-10-11",
+                    zoomMin: 1000 * 60 * 60 * 24 * 31 * 120,
+
+        
+                    margin: {
+                        item: 4,
+                        axis: 10
+        
+                    },
+                    stack: true,
+                    verticalScroll: true,
+                    zoomKey: "ctrlKey",
+                    selectable: true,
+                    template: function (item) {
+                        if (item.content == "LA" || item.content == "V" || item.content == "DF" || item.content == "NB")
+                            return '<h1 id="' + item.className + '">' + item.content + '</h1>';
+                        else if (item.content == "S" || item.content == "EL" || item.content == "ALT" || item.content == "KF" || item.content == "RV" || item.content == "SF")
+                            return '<h2 id="right" class="' + item.className + '">' + item.content + '</h2>';
+                        else {
+                            return '<h6 id="some" class="some">' + item.content + '</h6>';
+                        }
+                    }
+                };
         
         
        
-                const timeline2 = new vis.Timeline(container2, items2, options);
+                const timeline2 = new vis.Timeline(container2, items2, options2);
                 timeline2.on('select', function (props) {
         
                     // create empty array to hold ids of items with the same class name
