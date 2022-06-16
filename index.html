@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="datafile.js"></script> -->
+    <script type="text/javascript"
+    src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="datafileDay.js"></script>
+    <script src="datafileMonth.js"></script>
+    <script src="datafileYear.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h3><br>Zoom:<code> 'ctrlKey' + scroll</code></h3>
+    </center>
+<div class="warpper">
+  <input class="radio" id="one" name="group" type="radio" checked>
+  <input class="radio" id="two" name="group" type="radio">
+  <input class="radio" id="three" name="group" type="radio">
+
+  <div class="tabs">
+    <label class="tab" id="one-tab" for="one">Day</label>
+    <label class="tab" id="two-tab" for="two">Month</label>
+    <label class="tab" id="three-tab" for="three">Year</label>
+  </div>
+
+  <div class="panels" style="overflow-y: scroll;">
+    <div  class="panel" id="one-panel" >
+      <div class="panel-title">Climate-quotes pr. party pr. Day     (Blue = right wing party, Red = left wing party, size = determined by ammount of climate quotes)</div>
+      <h5 id="visualization"></h5>
+      <script type="text/javascript" src="visDay.js"></script>
+    </div>
+    <div class="panel" id="two-panel">
+      <div class="panel-title">Climate-quotes pr. party pr. Month     (Blue = right wing party, Red = left wing party, size = determined by ammount of climate quotes)</div>
+      <h5 id="visualization1"></h5>
+      <script type="text/javascript" src="visMonth.js"></script>
+    </div>
+    <div class="panel" id="three-panel">
+      <div class="panel-title">Climate-quotes pr. party pr. Year     (Blue = right wing party, Red = left wing party, size = determined by ammount of climate quotes) </div>
+      <h5 id="visualization2"></h5>
+      <script type="text/javascript" src="visYear.js"></script>
+    </div>
+  </div>
+</div>
+</body>
+</html>
