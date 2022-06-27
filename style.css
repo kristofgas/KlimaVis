@@ -8,6 +8,7 @@ body {
     text-align: center;
     font-size: 2em;
     margin: 20px 0;
+
   }
   
   .warpper {
@@ -38,6 +39,8 @@ body {
     overflow: hidden;
     padding: 20px;
   }
+
+
   
   .panel {
     display: none;
@@ -54,7 +57,7 @@ body {
   }
   
   .panel-title {
-    font-size: 1em;
+    font-size: 10px;
     font-weight: bold;
   }
   
@@ -101,7 +104,13 @@ body {
 
     h6 {
         opacity: 0.3;
-        text-overflow: clip;
+        /* text-overflow: clip; */
+        font-size: large;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        margin-left: 4rem;
+        color: #852c98;
+        margin-left: 100px;
     }
 
 

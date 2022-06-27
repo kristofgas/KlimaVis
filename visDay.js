@@ -1,30 +1,23 @@
 const container = document.getElementById("visualization");
     
 const eventArray =
-    [{
-        id: "A",
-        content: "UN Conference Paris (increasing cc attention)",
-        start: "2014-01-22",
-        end: "2014-01-30",
-        type: "background",
-        className: "negative",
-    },
-    {
-        id: "B",
-        content: "Danish Parliment Election (climate-policy top priority among voters)",
-        start: "2019-01-01",
-        end: "2019-05-31",
-        type: "background",
-        className: "negative",
-    }, {
-        id: "C",
-        content: "Covid (decreasing cc-attention)",
-        start: "2020-01-01",
-        end: "2022-06-04",
-        type: "background",
-        className: "negative",
+[{
+    id: "A",
+    content: "Year of Paris agreement",
+    start: "2015-01-01",
+    end: "2015-12-31",
+    type: "background",
+    className: "negative",
+},
+{
+    id: "B",
+    content: "Year of danish parliment election (climate-policy top priority among voters)",
+    start: "2019-01-01",
+    end: "2019-12-31",
+    type: "background",
+    className: "negative",
+}];
 
-    }];
 
 // Create a DataSet (allows two way data-binding)
 
@@ -50,13 +43,13 @@ const options = {
     zoomKey: "ctrlKey",
     selectable: true,
     template: function (item) {
-        if (item.content == "LA" || item.content == "V" || item.content == "DF" || item.content == "NB")
-            return '<h1 id="' + item.className + '">' + item.content + '</h1>';
-        else if (item.content == "S" || item.content == "EL" || item.content == "ALT" || item.content == "KF" || item.content == "RV" || item.content == "SF")
-            return '<h2 id="right" class="' + item.className + '">' + item.content + '</h2>';
-        else {
-            return '<h6 id="some" class="some">' + item.content + '</h6>';
-        }
+        if (item.content == "LA" || item.content == "V" || item.content == "DF" || item.content == "NB"|| item.content == "SP"|| item.content == "NQ")
+        return '<h1 id="' + item.className + '">' + item.content + '</h1>';
+    else if (item.content == "S" || item.content == "EL" || item.content == "ALT" || item.content == "KF" || item.content == "RV" || item.content == "SF" || item.content == "JF"|| item.content == "IA"|| item.content == "SIU"|| item.content == "KD")
+        return '<h2 id="right" class="' + item.className + '">' + item.content + '</h2>';
+    else {
+        return '<h6 id="some" class="some">' + item.content + '</h6>';
+    }
     }
 };
 

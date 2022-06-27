@@ -21,13 +21,13 @@
         zoomKey: "ctrlKey",
         selectable: true,
         template: function (item) {
-            if (item.content == "LA" || item.content == "V" || item.content == "DF" || item.content == "NB")
-                return '<h1 id="' + item.className + '">' + item.content + '</h1>';
-            else if (item.content == "S" || item.content == "EL" || item.content == "ALT" || item.content == "KF" || item.content == "RV" || item.content == "SF")
-                return '<h2 id="right" class="' + item.className + '">' + item.content + '</h2>';
-            else {
-                return '<h6 id="some" class="some">' + item.content + '</h6>';
-            }
+            if (item.content == "LA" || item.content == "V" || item.content == "DF" || item.content == "NB"|| item.content == "SP"|| item.content == "NQ")
+            return '<h1 id="' + item.className + '">' + item.content + '</h1>';
+        else if (item.content == "S" || item.content == "EL" || item.content == "ALT" || item.content == "KF" || item.content == "RV" || item.content == "SF" || item.content == "JF"|| item.content == "IA"|| item.content == "SIU"|| item.content == "KD")
+            return '<h2 id="right" class="' + item.className + '">' + item.content + '</h2>';
+        else {
+            return '<h6 id="some" class="some">' + item.content + '</h6>';
+        }
         }
     };
 
